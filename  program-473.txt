@@ -1,0 +1,11 @@
+; ===================================================
+; Vole Machine Program 2: Subtraction via Two's Complement
+; Purpose: Subtract 7 from 15 (15 - 7) using two's complement (-7 = F9 hex).
+; Output: Result (8 = 08 hex) written to screen memory [FF].
+; ===================================================
+
+210F ; 00: R1 = 0F (Load 15 into R1)
+22F9 ; 02: R2 = F9 (Load -7 into R2)
+5312 ; 04: R3 = R1 + R2 (15 + (-7) = 8)
+33FF ; 06: Store R3 to FF (screen output)
+C000 ; 08: Halt execution
